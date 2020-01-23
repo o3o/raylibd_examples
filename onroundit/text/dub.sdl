@@ -1,0 +1,13 @@
+name "text"
+description "Core - Basic window"
+authors "o3o"
+copyright "Copyright © 2020, o3o"
+dependency "raylib-d" version="~>2.5.0"
+libs "raylib"
+
+// dub -cformat
+configuration "format" {
+   targetType "executable"
+   targetName "format"
+   sourceFiles "format_text.d"
+}
