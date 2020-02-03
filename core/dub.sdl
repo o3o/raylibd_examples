@@ -3,11 +3,21 @@ description "Core - Basic window"
 authors "o3o"
 copyright "Copyright © 2020, o3o"
 dependency "raylib-d" version="~>2.5.0"
-libs "raylib"
+/*libs "raylib"*/
+targetType "executable"
 
 // dub -cbasic
 configuration "basic" {
-   targetType "executable"
    targetName "basic"
    sourceFiles "basic.d"
+   libs "raylib"
 }
+
+configuration "arm" {
+   targetName "basic-arm"
+   sourceFiles "basic.d"
+   libs "raylib"
+   dflags "-conf=ldc_arm.conf" platform="ldc"
+}
+
+
