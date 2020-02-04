@@ -10,4 +10,10 @@ configuration "format" {
    targetType "executable"
    targetName "format"
    sourceFiles "format_text.d"
+   }
+
+configuration "ib" {
+   targetType "executable"
+   targetName "input_box"
+   sourceFiles "input_box.d"
 }

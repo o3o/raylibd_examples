@@ -10,8 +10,16 @@ targetType "executable"
 configuration "basic" {
    targetName "basic_window"
    sourceFiles "basic_window.d"
-   libs "raylib"
+   lflags "-L/usr/local/lib"  "-lraylib"
+   libs "x11"
  }
+configuration "basic2" {
+   targetName "basic_window2"
+   sourceFiles "basic_window.d"
+   sourceFiles "./libraylib.a"
+   libs "x11"
+ }
+
 
 configuration "mouse" {
    targetName "input_mouse"
