@@ -2,7 +2,6 @@ import std.stdio;
 import raylib;
 
 void main(string[] args) {
-
    // Initialization
    enum SCREEN_WIDTH = 800;
    enum SCREEN_HEIGHT = 450;

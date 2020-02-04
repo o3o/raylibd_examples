@@ -8,16 +8,25 @@ targetType "executable"
 
 // dub -cbasic
 configuration "basic" {
-   targetName "basic"
-   sourceFiles "basic.d"
+   targetName "basic_window"
+   sourceFiles "basic_window.d"
+   libs "raylib"
+ }
+
+configuration "mouse" {
+   targetName "input_mouse"
+   sourceFiles "input_mouse.d"
+   libs "raylib"
+}
+
+configuration "multi" {
+   targetName "input_multitouch"
+   sourceFiles "input_multitouch.d"
    libs "raylib"
 }
 
 configuration "arm" {
    targetName "basic-arm"
-   sourceFiles "basic.d"
-   libs "raylib"
+   sourceFiles "basic_window.d" "./libraylib.a"
    dflags "-conf=ldc_arm.conf" platform="ldc"
 }
-
-
